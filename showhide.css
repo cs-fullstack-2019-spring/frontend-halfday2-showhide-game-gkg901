@@ -1,6 +1,7 @@
 table {
     /* Use whatever background image (or images) you like */
-    background: url("forest-background.jpg") no-repeat;
+    background: url("1080p-HD-Wallpapers-9.jpg") no-repeat;
+
     table-layout: fixed;
 }
 
@@ -9,3 +10,5 @@ td {
     width: 100px;
     height: 100px;
 }
+
+

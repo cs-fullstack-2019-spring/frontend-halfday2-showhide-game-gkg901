@@ -1,3 +1,13 @@
+//ATTEMPTED TO ADD AUDIO
+function play() {
+    var audio = document.getElementById('audio');
+    if (audio.paused) {
+        audio.play();
+    }else{
+        audio.currentTime = 0
+    }
+}
+play();
 let clicks = 0;
 let targets = 0;
 let hits = 0;
@@ -6,18 +16,21 @@ let hits = 0;
 function letsRock() {
     let theGo = document.getElementById("goGetIt");
     theGo.onclick = function () {
+
+
         // Get random number of targets and do setup
         const targetKount = document.getElementById("numberOfTargets").value;
-        // Don't allow more than 50 targets as that's all the TDs we have
-        if (targetKount > 50)
+        // Don't allow more than 30 targets as that's all the TDs we have
+        if (targetKount > 30)
         {
-            alert("Maximum number of targets is 50!");
+            alert("Maximum number of targets is 30!");
             return;
         }
         const targetTime = document.getElementById("displayTime").value;
         // Now start the game!
         setUpTargetsAndPlay(parseInt(targetKount), parseInt(targetTime));
-    };
+    }
+
 }
 // Utility function to get a random table cell number
 function getRandomInt(min, max) {
@@ -36,9 +49,12 @@ function clickedTarget(e) {
         // Make hit target image visible again
         e.target.querySelector("img").style.display = 'block';
     }
+
     console.log("Got a Hit!");
     // Update their hit score
     hits += 1;
+    //DISPLAY SCORE
+    $("score").text(hits);
 }
 
 function testThis(el) {
@@ -81,3 +97,4 @@ function setUpTargetsAndPlay(numberOfTargets, displayTimeMs) {
     }
 
 }
+
