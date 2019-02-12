@@ -1,3 +1,6 @@
+### POINTS: .5
+### KEY: I can see u did some stuff but doesnt run. Always test Man.
+
 # JavaScript Show/Hide Game
 
 Take this simple show/hide game and make it your own.
